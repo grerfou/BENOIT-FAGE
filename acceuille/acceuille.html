@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benoit Fage</title>
+    <link rel="stylesheet" href="/acceuille/acceuille.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <a href="/acceuille/acceuille.html">
+            <div class="Nom">Benoit Fage</div>
+        </a>
+    </div>
+
+    <div class="container1">
+        <div class="item1">
+                <p class="prestxt">
+                Après avoir réalisè deux formations dans l'industrie métallurgique
+                 en alternance, je décide de m'orienter vers une école de design pour
+                 découvrir une multitude de savoir-faire et m'ouvrir à différentes 
+                 applications. 
+                 Aujourd'hui, après mes deux premières années à l'école, j'aimerais 
+                 découvrir des pratiques liées à l'objet, l'expérimentation et le numérique.
+                </p>
+
+                <div class="CV">
+
+                    <div class="Formation">
+                        <h2 class="TT"> Formation </h2>
+
+                        <p class="txt"> Diplome nationnal d'art <br>
+                            Esadse Saint-Etienne(42000) <br>
+                            Depuis 2020
+                        </p>
+
+
+                        <p class="txt">Prépa <br>
+                        Pass'art Levallois Perret (93300) <br>
+                        De 2019 à 2020
+                        </p>
+
+                        <p class="txt">Bac pro Microtechnique <br>
+                        CFAI Besançon (25000) <br>
+                        De 2017 à 2019
+                        </p>
+
+                        <p class="txt">CAP Chaudronnerie industrielle <br>
+                        CFAI Beaurepaire (38270) <br>
+                        De 2015 à 2017
+                        </p>
+                    </div>
+
+
+
+                    <div class="Experience">
+                        <h2 class="TT"> Experience </h2>
+
+                        <p class="txt"> Diplome nationnal d'art <br>
+                            Esadse Saint-Etienne(42000) <br>
+                            Depuis 2020
+                        </p>
+
+
+                        <p class="txt">Prépa <br>
+                        Pass'art Levallois Perret (93300) <br>
+                        De 2019 à 2020
+                        </p>
+
+                        <p class="txt">Bac pro Microtechnique <br>
+                        CFAI Besançon (25000) <br>
+                        De 2017 à 2019
+                        </p>
+
+                        <p class="txt">CAP Chaudronnerie industrielle <br>
+                        CFAI Beaurepaire (38270) <br>
+                        De 2015 à 2017
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="Contact">
+                    <h2 class="TT"> Contact </h2>
+
+                    <p class="txt"> 
+                        06.18.96.31.78 <br>
+                        benoit.fage@etudiant.esadse.fr <br>
+                    </p>
+                </div>
+            
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class=" menu">
+
+                <a href="/Lunette/lunette.html" class="menu-item">
+                    <div>
+                        <span class="menu-item-txt">Lunette &nbsp de  &nbsp Turing</span>
+                    </div>
+                </a>
+        
+                <a href="/arbre-concepteur/Arbre-Concepteur.html" class="menu-item">
+                    <div>
+                        <span class="menu-item-txt">arbre &nbsp concepteur</span>
+                    </div>
+                </a>
+        
+                <a href="/Particule_livre/Particule-livre.html" class="menu-item">
+                    <div>
+                        <span class="menu-item-txt">particule &nbsp de &nbsp livre</span>
+                    </div>
+                </a>
+        
+                <a href="/Lampe/Lampe.html" class="menu-item">
+                    <div>
+                        <span class="menu-item-txt">systeme &nbsp ambiant</span>
+                    </div>
+                </a>
+
+        </div>
+        <script>
+            const menuItems = [...document.querySelectorAll(".menu-item")];
+
+            menuItems.forEach(item => {
+
+                let word = item.children[0].children[0].innerText.split('');
+                item.children[0].innerHTML = '';
+
+                word.forEach((letter, idx) => {
+                item.children[0].innerHTML += `<span style="--index: ${idx};">${letter}</span>`
+                })
+                let cloneDiv = item.children[0].cloneNode(true);
+                cloneDiv.style.position = 'absolute';
+                cloneDiv.style.left = '0';
+                cloneDiv.style.top  = '0';
+                item.appendChild(cloneDiv);
+})
+        </script>
+        
+
+
+
+        
+        <div class="cursor"></div>
+        <script>
+            const cursor = document.querySelector(".cursor");
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top  = e.pageY + 'px';
+            });
+        </script>
+
+        
+</body>
